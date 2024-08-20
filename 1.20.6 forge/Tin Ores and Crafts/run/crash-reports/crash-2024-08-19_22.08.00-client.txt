@@ -1,0 +1,228 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2024-08-19 22:08:00
+Description: Unexpected error
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.core.Holder.value()" because "p_327093_" is null
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ArmorItem.lambda$new$1(ArmorItem.java:125) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading}
+	at SECURE-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.base.Suppliers$NonSerializableMemoizingSupplier.get(Suppliers.java:181) ~[guava-32.1.2-jre.jar:?] {}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ArmorItem.getDefaultAttributeModifiers(ArmorItem.java:171) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ItemStack.forEachModifier(ItemStack.java:919) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ItemStack.addAttributeTooltips(ItemStack.java:784) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ItemStack.getTooltipLines(ItemStack.java:741) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.lambda$createSearchTrees$18(Minecraft.java:837) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.PlainTextSearchTree.create(PlainTextSearchTree.java:20) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.FullTextSearchTree.refresh(FullTextSearchTree.java:26) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.SearchRegistry$TreeEntry.populate(SearchRegistry.java:61) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.SearchRegistry.populate(SearchRegistry.java:42) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.populateSearchTree(Minecraft.java:2701) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.lambda$createSearchTrees$30(Minecraft.java:874) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTab.rebuildSearchTree(CreativeModeTab.java:157) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTab.buildContents(CreativeModeTab.java:136) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTabs.lambda$buildAllTabContents$53(CreativeModeTabs.java:2185) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B}
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?] {}
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[?:?] {}
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?] {}
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?] {}
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?] {}
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?] {}
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?] {}
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?] {}
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTabs.buildAllTabContents(CreativeModeTabs.java:2185) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTabs.tryRebuildTabContents(CreativeModeTabs.java:2196) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.<init>(CreativeModeInventoryScreen.java:124) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.gui.screens.inventory.InventoryScreen.init(InventoryScreen.java:50) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.gui.screens.Screen.init(Screen.java:324) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.setScreen(Minecraft.java:1098) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.handleKeybinds(Minecraft.java:2027) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.tick(Minecraft.java:1895) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.runTick(Minecraft.java:1203) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.run(Minecraft.java:800) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.main.Main.main(Main.java:242) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.20.6-50.1.13/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:91) ~[fmlloader-1.20.6-50.1.13.jar!/:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.20.6-50.1.13/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:75) ~[fmlloader-1.20.6-50.1.13.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.1.jar!/:?] {}
+	at net.minecraftforge.bootstrap@2.1.3/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.3.jar!/:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.3.jar:2.1.3] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Suspected Mods: NONE
+Stacktrace:
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ArmorItem.lambda$new$1(ArmorItem.java:125) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading}
+	at SECURE-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.base.Suppliers$NonSerializableMemoizingSupplier.get(Suppliers.java:181) ~[guava-32.1.2-jre.jar!/:?] {}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ArmorItem.getDefaultAttributeModifiers(ArmorItem.java:171) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ItemStack.forEachModifier(ItemStack.java:919) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ItemStack.addAttributeTooltips(ItemStack.java:784) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.ItemStack.getTooltipLines(ItemStack.java:741) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.lambda$createSearchTrees$18(Minecraft.java:837) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.PlainTextSearchTree.create(PlainTextSearchTree.java:20) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.FullTextSearchTree.refresh(FullTextSearchTree.java:26) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.SearchRegistry$TreeEntry.populate(SearchRegistry.java:61) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.searchtree.SearchRegistry.populate(SearchRegistry.java:42) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.populateSearchTree(Minecraft.java:2701) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.lambda$createSearchTrees$30(Minecraft.java:874) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTab.rebuildSearchTree(CreativeModeTab.java:157) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTab.buildContents(CreativeModeTab.java:136) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTabs.lambda$buildAllTabContents$53(CreativeModeTabs.java:2185) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?] {}
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[?:?] {}
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?] {}
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?] {}
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?] {}
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?] {}
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?] {}
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?] {}
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTabs.buildAllTabContents(CreativeModeTabs.java:2185) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.world.item.CreativeModeTabs.tryRebuildTabContents(CreativeModeTabs.java:2196) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.<init>(CreativeModeInventoryScreen.java:124) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.gui.screens.inventory.InventoryScreen.init(InventoryScreen.java:50) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.gui.screens.Screen.init(Screen.java:324) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.setScreen(Minecraft.java:1098) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.handleKeybinds(Minecraft.java:2027) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Uptime --
+Details:
+	JVM uptime: 62.905s
+	Wall uptime: 45.624s
+	High-res time: 57.910s
+	Client ticks: 662 ticks / 33.100s
+Stacktrace:
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.fillReport(Minecraft.java:2448) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:912) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.Minecraft.run(Minecraft.java:821) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.20.6/net.minecraft.client.main.Main.main(Main.java:242) ~[forge-1.20.6-50.1.13_mapped_official_1.20.6.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.20.6-50.1.13/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:91) ~[fmlloader-1.20.6-50.1.13.jar!/:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.20.6-50.1.13/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:75) ~[fmlloader-1.20.6-50.1.13.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.1.jar!/:?] {}
+	at net.minecraftforge.bootstrap@2.1.3/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.3.jar!/:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.3.jar:2.1.3] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Dev'/42, l='ClientLevel', x=7.01, y=-60.00, z=-1.41]]
+	Chunk stats: 961, 609
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 14025 game time, 14025 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+	Tracked entity count: 144
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, mod_resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.6
+	Minecraft Version ID: 1.20.6
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 21.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 476781920 bytes (454 MiB) / 1075838976 bytes (1026 MiB) up to 3210739712 bytes (3062 MiB)
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-4460  CPU @ 3.20GHz
+	Identifier: Intel64 Family 6 Model 60 Stepping 3
+	Microarchitecture: Haswell (Client)
+	Frequency (GHz): 3.20
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 4
+	Graphics card #0 name: NVIDIA GeForce GTX 750 Ti
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MB): 2048.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.6081
+	Memory slot #0 capacity (MB): 4096.00
+	Memory slot #0 clockSpeed (GHz): 1.60
+	Memory slot #0 type: DDR3
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 1.60
+	Memory slot #1 type: DDR3
+	Virtual memory max (MB): 19895.41
+	Virtual memory used (MB): 17677.27
+	Swap memory total (MB): 7651.84
+	Swap memory used (MB): 1406.44
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: NVIDIA GeForce GTX 750 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 560.81, NVIDIA Corporation
+	Window size: 1920x1017
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Universe: 400921fb54442d18
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Render Distance: 12/12 chunks
+	Resource Packs: vanilla, mod_resources
+	Current Language: en_us
+	Locale: es_MX
+	CPU: 4x Intel(R) Core(TM) i5-4460 CPU @ 3.20GHz
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/42, l='ServerLevel[New World]', x=7.01, y=-60.00, z=-1.41]]
+	Active Data Packs: vanilla (incompatible), mod:tin_ores_and_crafts (incompatible), mod:forge (incompatible)
+	Available Data Packs: bundle, mod:forge (incompatible), mod:tin_ores_and_crafts (incompatible), trade_rebalance, update_1_21, vanilla (incompatible)
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Experimental
+	World Seed: -5484759087364434697
+	ModLauncher: 10.2.1
+	ModLauncher launch target: forge_userdev_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ object_holder_definalize PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ eventbus PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		lowcodefml@50
+		minecraft@1.0
+		javafml@50.1.13
+	Mod List: 
+		                                                  |Minecraft                     |minecraft                     |1.20.6              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Tin Ores and Crafts           |tin_ores_and_crafts           |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |50.1.13             |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 06a617c1-9dea-445d-ada6-1576839a6029
+	FML: 0.0
+	Forge: net.minecraftforge:50.1.13

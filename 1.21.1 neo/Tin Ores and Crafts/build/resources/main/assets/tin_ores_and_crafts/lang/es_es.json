@@ -1,0 +1,21 @@
+{
+  "item.tin_ores_and_crafts.tinsword": "Espada de Estaño",
+  "item.tin_ores_and_crafts.tiningot": "Lingote de Estaño",
+  "item.tin_ores_and_crafts.tinaxe": "Hacha de Estaño",
+  "block.tin_ores_and_crafts.tinoreblock": "Mena de Estaño",
+  "block.tin_ores_and_crafts.tinblock": "Bloque de Estaño",
+  "block.tin_ores_and_crafts.tindoor": "Puerta de Estaño",
+  "item.tin_ores_and_crafts.tinnugget": "Pepita de Estaño",
+  "itemGroup.tab_modtap": "Tin Ores and Crafts",
+  "item.tin_ores_and_crafts.tinarmor_helmet": "Casco de Estaño",
+  "item.tin_ores_and_crafts.tinarmor_leggings": "Grebas de Estaño",
+  "block.tin_ores_and_crafts.tintrapdoor": "Trampilla de Estaño",
+  "item.tin_ores_and_crafts.tinshovel": "Pala de Estaño",
+  "item.tin_ores_and_crafts.tinpickaxe": "Pico de Estaño",
+  "item.tin_ores_and_crafts.tinarmor_chestplate": "Peto de Estaño",
+  "item.tin_ores_and_crafts.tinarmor_boots": "Botas de Estaño",
+  "item.tin_ores_and_crafts.tinhoe": "Azada de Estaño",
+  "item_group.tin_ores_and_crafts.modtap": "Tin Ores and Crafts",
+  "block.tin_ores_and_crafts.rawtinblock": "Bloque de Estaño en Bruto",
+  "item.tin_ores_and_crafts.rawtin": "Estaño en Bruto"
+}

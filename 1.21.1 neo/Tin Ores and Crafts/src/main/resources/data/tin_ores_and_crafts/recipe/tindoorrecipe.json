@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "tin_ores_and_crafts:tiningot"
+    }
+  },
+  "result": {
+    "id": "tin_ores_and_crafts:tindoor",
+    "count": 3
+  }
+}

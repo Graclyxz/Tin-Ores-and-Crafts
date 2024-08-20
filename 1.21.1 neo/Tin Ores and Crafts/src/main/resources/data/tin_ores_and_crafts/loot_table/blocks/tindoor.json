@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "tin_ores_and_crafts:blocks/tindoor",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tin_ores_and_crafts:tindoor",
+          "conditions": [
+            {
+              "block": "tin_ores_and_crafts:tindoor",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

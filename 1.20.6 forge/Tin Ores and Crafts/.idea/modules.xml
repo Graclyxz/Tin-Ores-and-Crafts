@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tin-ores-and-crafts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tin-ores-and-crafts.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tin-ores-and-crafts.test.iml" filepath="$PROJECT_DIR$/.idea/modules/tin-ores-and-crafts.test.iml" />
+    </modules>
+  </component>
+</project>

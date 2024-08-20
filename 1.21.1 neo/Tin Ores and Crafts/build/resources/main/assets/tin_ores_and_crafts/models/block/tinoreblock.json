@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tin_ores_and_crafts:block/tin_ore_block",
+    "up": "tin_ores_and_crafts:block/tin_ore_block",
+    "north": "tin_ores_and_crafts:block/tin_ore_block",
+    "east": "tin_ores_and_crafts:block/tin_ore_block",
+    "south": "tin_ores_and_crafts:block/tin_ore_block",
+    "west": "tin_ores_and_crafts:block/tin_ore_block",
+    "particle": "tin_ores_and_crafts:block/tin_ore_block"
+  },
+  "render_type": "solid"
+}
