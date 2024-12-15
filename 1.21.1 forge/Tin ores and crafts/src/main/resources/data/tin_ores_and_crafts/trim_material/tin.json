@@ -1,9 +1,0 @@
-{
-  "asset_name": "tin",
-  "description": {
-    "color": "#817D5D",
-    "translate": "trim_material.tin_ores_and_crafts.tin"
-  },
-  "ingredient": "tin_ores_and_crafts:tiningot",
-  "item_model_index": 0.0
-}
