@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: tin_ores_and_crafts
-Specification-Vendor: Graclyxz
-Specification-Version: 1
-Implementation-Title: tin-ores-and-crafts
-Implementation-Version: 1.0.2
-Implementation-Vendor: Graclyxz
-Implementation-Timestamp: 2024-08-23T00:42:00-0500
-
