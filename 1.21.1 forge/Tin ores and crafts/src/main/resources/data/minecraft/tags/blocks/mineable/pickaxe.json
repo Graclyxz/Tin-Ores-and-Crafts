@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "tin_ores_and_crafts:tindoor",
+    "tin_ores_and_crafts:tintrapdoor",
+    "tin_ores_and_crafts:tinblock",
+    "tin_ores_and_crafts:tinoreblock",
+    "tin_ores_and_crafts:rawtinblock"
+  ]
+}

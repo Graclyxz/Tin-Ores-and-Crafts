@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "tin_ores_and_crafts:item/tin_pickaxe"
+  }
+}

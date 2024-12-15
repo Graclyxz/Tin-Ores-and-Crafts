@@ -1,0 +1,8 @@
+Java Launcher: C:\Program Files\Java\jdk-21\bin\java.exe
+Arguments: '--clean, C:\Users\jxavi\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.21.1-20240808.132146\joined-1.21.1-20240808.132146-srg.jar, --output, C:\Users\jxavi\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.21.1-52.0.8\forge-1.21.1-52.0.8-binpatched.jar, --apply, C:\Users\jxavi\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.21.1-52.0.8\forge-1.21.1-52.0.8-binpatches.lzma'
+Classpath:
+ - C:\Users\jxavi\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.2.0\binarypatcher-1.2.0-fatjar.jar
+Working directory: C:\Users\jxavi\Desktop\Maicra\MaicraMods\mods\Tin ores\1.21.1 forge\Tin ores and crafts\build\_applyBinpatches_3
+Main class: net.minecraftforge.binarypatcher.ConsoleTool
+====================================
+Could not delete output file: C:\Users\jxavi\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.21.1-52.0.8\forge-1.21.1-52.0.8-binpatched.jar

@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_bottom_right_open",
+  "textures": {
+    "particle": "tin_ores_and_crafts:block/tin_door_bottom",
+    "bottom": "tin_ores_and_crafts:block/tin_door_bottom",
+    "top": "tin_ores_and_crafts:block/tin_door_top"
+  },
+  "render_type": "cutout"
+}
