@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": "#c:ingots/tin"
+  },
+  "result": {
+    "id": "tinoresandcrafts:tin_nugget",
+    "count": 9
+  }
+}

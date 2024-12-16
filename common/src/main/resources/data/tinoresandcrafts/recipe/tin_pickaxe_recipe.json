@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " b ",
+    " b "
+  ],
+  "key": {
+    "a": "#c:ingots/tin",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "tinoresandcrafts:tin_pickaxe",
+    "count": 1
+  }
+}

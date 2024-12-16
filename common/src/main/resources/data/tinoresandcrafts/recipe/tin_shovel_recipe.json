@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "b"
+  ],
+  "key": {
+    "a": "#c:ingots/tin",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "tinoresandcrafts:tin_shovel",
+    "count": 1
+  }
+}

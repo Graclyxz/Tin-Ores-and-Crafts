@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": "tinoresandcrafts:raw_tin_block"
+  },
+  "result": {
+    "id": "tinoresandcrafts:raw_tin",
+    "count": 9
+  }
+}
