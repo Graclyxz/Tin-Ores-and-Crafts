@@ -6,7 +6,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [
-    "MixinTitleScreen"
+    "com.graclyxz.tinoresandcrafts.mixin.MixinTitleScreen"
   ],
   "server": [],
   "injectors": {

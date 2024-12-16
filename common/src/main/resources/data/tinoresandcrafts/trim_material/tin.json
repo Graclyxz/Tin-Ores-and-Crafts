@@ -1,0 +1,9 @@
+{
+  "asset_name": "tin",
+  "description": {
+    "color": "#817D5D",
+    "translate": "trim_material.tinoresandcrafts.tin"
+  },
+  "ingredient": "tinoresandcrafts:tin_ingot",
+  "item_model_index": 0.0
+}

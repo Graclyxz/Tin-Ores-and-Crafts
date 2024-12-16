@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tinoresandcrafts:tin_block",
+    "tinoresandcrafts:tin_ore",
+    "tinoresandcrafts:raw_tin_block"
+  ]
+}
