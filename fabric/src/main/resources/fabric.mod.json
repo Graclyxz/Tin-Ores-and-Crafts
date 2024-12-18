@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-          "com.graclyxz.tinoresandcrafts.ExampleMod"
+          "com.graclyxz.tinoresandcrafts.TinOresMod"
         ]
     },
     "mixins": [

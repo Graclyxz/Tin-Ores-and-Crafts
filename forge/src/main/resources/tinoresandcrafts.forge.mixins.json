@@ -1,11 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.example.examplemod.mixin",
+  "package": "com.graclyxz.tinoresandcrafts.mixin",
   "compatibilityLevel": "JAVA_18",
   "mixins": [],
   "client": [
-    "com.graclyxz.tinoresandcrafts.mixin.MixinTitleScreen"
+    "MixinTitleScreen"
   ],
   "server": [],
   "injectors": {
