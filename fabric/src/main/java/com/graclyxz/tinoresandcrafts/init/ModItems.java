@@ -1,5 +1,7 @@
 package com.graclyxz.tinoresandcrafts.init;
 
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -9,10 +11,8 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
@@ -23,30 +23,33 @@ import static com.graclyxz.tinoresandcrafts.init.ModMaterials.Tool;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, MODID);
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, MODID);
+    public static final List<Item> ITEMS = new ArrayList<>();
+    public static final List<Item> BLOCKS = new ArrayList<>();
 
     /*-*-*-*-*-*-*-*-* Item and Blocks creation *-*-*-*-*-*-*-*-*/
-    public static final List<RegistryObject<Item>> TIN_ITEMS = registerAllItems("tin", Tool.TIN, Armor.TIN, new Item.Properties());
-    public static final List<RegistryObject<Block>> TIN_BLOCKS = registerAllBlocks("tin",  new float[]{4f, 6f}, SoundType.STONE);
+    public static final List<Item> TIN_ITEMS = registerAllItems("tin", Tool.TIN, Armor.TIN, new Item.Properties());
+    public static final List<Block> TIN_BLOCKS = registerAllBlocks("tin",  new float[]{4f, 6f}, SoundType.STONE);
+
 
     /*-*-*-*-*-*-*-*-* item and blocks registration *-*-*-*-*-*-*-*-*/
-    public static RegistryObject<Block> registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp, Item.Properties itemProp) {
+    public static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp, Item.Properties itemProp) {
         var blockReg = registerBlock(name, function, blockProp);
-        registerItem(name, (p) -> new BlockItem(blockReg.get(), p), itemProp.useBlockDescriptionPrefix());
+        registerItem(name, (p) -> new BlockItem(blockReg, p), itemProp.useBlockDescriptionPrefix());
         return blockReg;
     }
 
-    public static RegistryObject<Block> registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp) {
-        return BLOCKS.register(name, () -> function.apply(blockProp.setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name)))));
+    public static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp) {
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name)), function.apply(blockProp.setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name)))));
     }
 
-    public static RegistryObject<Item> registerItem(String name, Function<Item.Properties, Item> function, Item.Properties itemProp) {
-        return ITEMS.register(name, () -> function.apply(itemProp.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name)))));
+    public static Item registerItem(String name, Function<Item.Properties, Item> function, Item.Properties itemProp) {
+        var itemReg = Registry.register(BuiltInRegistries.ITEM, ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name)), function.apply(itemProp.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name)))));
+        ITEMS.add(itemReg);
+        return itemReg;
     }
 
     /*-*-*-*-*-*-*-*-* Items list *-*-*-*-*-*-*-*-*/
-    private static List<RegistryObject<Item>> registerAllItems(String name, ToolMaterial toolmaterial, ArmorMaterial armormaterial, Item.Properties itemProp) {
+    private static List<Item> registerAllItems(String name, ToolMaterial toolmaterial, ArmorMaterial armormaterial, Item.Properties itemProp) {
         return List.of(
                 registerItem( "raw_" + name, Item::new, itemProp),
                 registerItem( name +"_ingot", Item::new, itemProp),
@@ -66,7 +69,7 @@ public class ModItems {
     }
 
     /*-*-*-*-*-*-*-*-* Blocks list *-*-*-*-*-*-*-*-*/
-    private static List<RegistryObject<Block>> registerAllBlocks(String name, float[] strengthattr, SoundType soundblock) {
+    private static List<Block> registerAllBlocks(String name, float[] strengthattr, SoundType soundblock) {
         return List.of(
                 registerBlock(name + "_block", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops()
                         .strength(4f, 6f).sound(SoundType.METAL),
@@ -82,8 +85,6 @@ public class ModItems {
         );
     }
 
-    public static void init(IEventBus bus) {
-        ITEMS.register(bus);
-        BLOCKS.register(bus);
+    public static void init() {
     }
 }

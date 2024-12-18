@@ -30,7 +30,7 @@ public class ModConfiguredFeatures {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> overworldTinOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModItems.TIN_BLOCKS.get(1).get().defaultBlockState()));
+                OreConfiguration.target(stoneReplaceables, ModItems.TIN_BLOCKS.get(1).defaultBlockState()));
                 //,OreConfiguration.target(deepslateReplaceables, ModItems.TIN_BLOCKS.get(1).get().defaultBlockState()));
 
 
