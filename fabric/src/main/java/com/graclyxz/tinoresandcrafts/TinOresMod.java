@@ -2,7 +2,7 @@ package com.graclyxz.tinoresandcrafts;
 
 import net.fabricmc.api.ModInitializer;
 
-public class ExampleMod implements ModInitializer {
+public class TinOresMod implements ModInitializer {
     
     @Override
     public void onInitialize() {

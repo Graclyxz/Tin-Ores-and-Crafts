@@ -14,6 +14,7 @@ import static com.graclyxz.tinoresandcrafts.Constants.MODID;
 
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
+
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();

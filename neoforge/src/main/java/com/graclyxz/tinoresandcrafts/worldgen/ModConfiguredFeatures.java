@@ -47,7 +47,8 @@ public class ModConfiguredFeatures {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> overworldTinOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModItems.TIN_BLOCKS.get(1).get().defaultBlockState())); //,OreConfiguration.target(deepslateReplaceables, ModBlocks.BISMUTH_DEEPSLATE_ORE.get().defaultBlockState()
+                OreConfiguration.target(stoneReplaceables, ModItems.TIN_BLOCKS.get(2).get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModItems.TIN_BLOCKS.get(0).get().defaultBlockState())); //,OreConfiguration.target(deepslateReplaceables, ModBlocks.BISMUTH_DEEPSLATE_ORE.get().defaultBlockState()
 
 
         register(context, OVERWORLD_TIN_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTinOres, 9));
@@ -79,8 +80,8 @@ public class ModConfiguredFeatures {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MODID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
-                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register
+            (BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 }
