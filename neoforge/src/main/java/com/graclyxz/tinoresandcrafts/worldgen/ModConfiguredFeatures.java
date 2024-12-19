@@ -47,8 +47,8 @@ public class ModConfiguredFeatures {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> overworldTinOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModItems.TIN_BLOCKS.get(2).get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModItems.TIN_BLOCKS.get(0).get().defaultBlockState())); //,OreConfiguration.target(deepslateReplaceables, ModBlocks.BISMUTH_DEEPSLATE_ORE.get().defaultBlockState()
+                OreConfiguration.target(stoneReplaceables, ModItems.TIN_BLOCKS.get(1).get().defaultBlockState()));
+                //,OreConfiguration.target(deepslateReplaceables, ModItems.TIN_BLOCKS.get(1).get().defaultBlockState())); //,OreConfiguration.target(deepslateReplaceables, ModBlocks.BISMUTH_DEEPSLATE_ORE.get().defaultBlockState()
 
 
         register(context, OVERWORLD_TIN_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTinOres, 9));
