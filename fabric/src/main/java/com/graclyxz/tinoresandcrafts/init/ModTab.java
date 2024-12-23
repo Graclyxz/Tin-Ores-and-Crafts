@@ -11,7 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 
-import static com.graclyxz.tinoresandcrafts.Constants.MODID;
+import static com.graclyxz.tinoresandcrafts.Constants.MOD_ID;
 
 public class ModTab {
     public static final CreativeModeTab TAB_TIN_ORES_AND_CRAFTS = FabricItemGroup.builder()
@@ -24,6 +24,6 @@ public class ModTab {
             .build();
 
     public static void init() {
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MODID, "tab_tinoresandcrafts"), TAB_TIN_ORES_AND_CRAFTS);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MOD_ID, "tab_tinoresandcrafts"), TAB_TIN_ORES_AND_CRAFTS);
     }
 }
