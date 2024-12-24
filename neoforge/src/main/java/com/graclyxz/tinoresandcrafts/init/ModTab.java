@@ -11,11 +11,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static com.graclyxz.tinoresandcrafts.Constants.MODID;
+import static com.graclyxz.tinoresandcrafts.Constants.MOD_ID;
 
 
 public class ModTab {
-    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
     public static final Supplier<CreativeModeTab> TAB_TIN_ORES_AND_CRAFTS = TABS.register("tab_tinoresandcrafts", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.TIN_ITEMS.get(1).asItem()))
