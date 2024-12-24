@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "ingotcraft:item/tin_nugget"
+    "model": "tinoresandcrafts:item/tin_nugget"
   }
 }

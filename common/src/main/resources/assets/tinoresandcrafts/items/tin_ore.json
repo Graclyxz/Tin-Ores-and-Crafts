@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "ingotcraft:item/tin_ore"
+    "model": "tinoresandcrafts:item/tin_ore"
   }
 }
